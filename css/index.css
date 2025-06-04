@@ -1,0 +1,135 @@
+:root {
+    --primary: #19144c;
+    --secondary: #cecece;
+    --bg: #010101;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg);
+    font-family: Sans-Serif, Arial;
+    color: var(--secondary);
+}
+
+/*  Navbar Start  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #cecece;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+.navbar .navbar-nav a {
+  color: var(--secondary);
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--secondary);
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Media Query */
+/* Laptop */
+@media (max-width: 1366px){
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px){
+  html {
+    font-size: 62.5%;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 480px){
+  html {
+    font-size: 55%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-left: var(--primary);
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    flex-direction: column;
+    padding: 2rem;
+    z-index: 9998;
+  }
+
+  .navbar .navbar-nav.active {
+    transform: translateX(50%);
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1.9rem 0;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.15);
+  }
+}
+
+/*  Navbar End  */
+/*  LandingElemen Start  */
+/*  LandingElemen End  */
