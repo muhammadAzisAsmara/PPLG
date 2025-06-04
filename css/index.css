@@ -15,6 +15,7 @@ body {
     background-color: var(--bg);
     font-family: Sans-Serif, Arial;
     color: var(--secondary);
+    min-height: 2000px;
 }
 
 /*  Navbar Start  */
@@ -73,6 +74,110 @@ body {
   display: none;
 }
 
+/* Hero Section Start */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../media/heroBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1, 1, 3 ,1) 8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+.hero .content h1 span {
+  color: var(--primary);
+}
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Hero Section End */
+/* About Section Start */
+.tentang, 
+.proyek {
+  padding: 10rem 7% 1.4rem;
+}
+.tentang h2, 
+.proyek h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+.tentang h2 span, .proyek h2 span {
+  color: var(--primary);
+}
+.tentang .row {
+  display: flex;
+}
+.tentang .row .tentang-img {
+  flex: 1 1 45rem;
+}
+.tentang .row .tentang-img img {
+  width: 100%;
+}
+.tentang .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.tentang .row .content h3 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+.tentang .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+/* About Section End */
+/* Proyek Section Start */
+.proyek h2 {
+  margin-bottom: 1rem;
+}
+.proyek p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+/* Proyek Section End */
+
 /* Media Query */
 /* Laptop */
 @media (max-width: 1366px){
@@ -85,13 +190,6 @@ body {
   html {
     font-size: 62.5%;
   }
-}
-/* Mobile Phone */
-@media (max-width: 480px){
-  html {
-    font-size: 55%;
-  }
-
   #hamburger-menu {
     display: inline-block;
   }
@@ -127,6 +225,27 @@ body {
   }
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.15);
+  }
+  .tentang .row {
+    flex-wrap: wrap;
+  }
+  .tentang .row .tentang-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .tentang .row .content p {
+    padding: 0;
+  }
+  .tentang .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 480px){
+  html {
+    font-size: 55%;
   }
 }
 
