@@ -15,9 +15,10 @@
           <a href="#" class="navbar-logo">Infinite<span>Loops</span></a>
           
           <div class="navbar-nav ">
-            <a href="#home">Home</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#project">Project</a>
+            <a href="#hero">Home</a>
+            <a href="#tentang">About</a>
+            <a href="#student">Student</a>
+            <a href="#galeri">Galery</a>
             <a href="#kontak">Kontak</a>
           </div>
           
@@ -31,7 +32,7 @@
         <section class="hero" id="hero">
           <main class="content">
             <h1>Pengembangan <span>Perangkat Lunak</span> Dan Gim</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, harum.</p>
+            <p>Bukan Sekedar Kelas. Ini Kumpulan Pencipta Masa Depan</p>
             <a href="#tentang" class="cta">Tentang Kami</a>
           </main>
         </section>
@@ -47,25 +48,101 @@
             </div>
             
             <div class="content">
+              <!-- Visi Misi -->
               <h3>Lorem ipsum.</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore odit quam.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore odit quam.</p>
+              <!-- Guru -->
+              <h3>Guru</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, molestiae?</p>
             </div>
             
           </div>
         </section>
         <!-- About Section End -->
-        <!-- Proyek Section Start -->
-        <section id="proyek" class="proyek">
-          <h2><span>Proyek </span>Kami</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam a reiciendis minima animi.</p>
+        <!-- Student Section Start -->
+        <section id="galeri" class="galeri">
+          <h2><span>Galeri </span>Kami</h2>
+          <p>Dokumentasi kegiatan dan karya siswa Pengembangan Perangkat Lunak dan Gim</p>
+          
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="kegiatan">Kegiatan</button>
+            <button class="filter-btn" data-filter="project">Project</button>
+            <button class="filter-btn" data-filter="kompetisi">Kompetisi</button>
+            <button class="filter-btn" data-filter="sertifikat">Sertifikat</button>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category="kegiatan">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Kegiatan Pembelajaran">
+              <div class="item-overlay">
+                <h3 class="item-title">Kegiatan Pembelajaran</h3>
+                <p class="item-description">Suasana belajar yang interaktif dan kolaboratif</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="project">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Project Coding">
+              <div class="item-overlay">
+                <h3 class="item-title">Project Development</h3>
+                <p class="item-description">Pengembangan aplikasi dan website oleh siswa</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="kompetisi">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Kompetisi Programming">
+              <div class="item-overlay">
+                <h3 class="item-title">Kompetisi Programming</h3>
+                <p class="item-description">Partisipasi dalam berbagai lomba coding</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="kegiatan">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Workshop">
+              <div class="item-overlay">
+                <h3 class="item-title">Workshop Teknologi</h3>
+                <p class="item-description">Pelatihan teknologi terbaru untuk siswa</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="sertifikat">
+              <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sertifikat">
+              <div class="item-overlay">
+                <h3 class="item-title">Pencapaian Siswa</h3>
+                <p class="item-description">Sertifikat dan penghargaan yang diraih</p>
+              </div>
+            </div>
+
+            <div class="gallery-item" data-category="project">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Data Analysis">
+              <div class="item-overlay">
+                <h3 class="item-title">Data Analysis Project</h3>
+                <p class="item-description">Analisis data menggunakan berbagai tools</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="view-all-btn" onclick="loadMoreImages()">Lihat Lebih Banyak</button>
         </section>
-        <!-- Proyek Section End -->
+        <!-- Gallery Section End -->
+        
+        <div id="imageModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+            <img id="modalImage" src="" alt="">
+          </div>
+        </div>
+        
         
         <!-- Feather Icons -->
         <script>
   feather.replace();
 </script>
+        
         <script src="js/index.js"></script>
+        <!-- Gallery JavaScript -->
+        <script src="js/galeri.js"></script>
+        
     </body>
 </html>
